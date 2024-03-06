@@ -87,6 +87,7 @@ function createPrompt(file: File, chunk: Chunk, prDetails: PRDetails): string {
 - Use the given description only for the overall context and only comment on the code.
 - Focus on security aspects and try to find any exposed tokens, keys, secrets, and passwords outside with print commands or in any other way.
 - Focus on best practices from the computer since industry and try to warn if you find any unmatch implementation with the best practices. 
+- Raise a comment if you see any PII data exposure using logs. for example: "logger.info({email, address, phone})" 
 - IMPORTANT: NEVER suggest adding comments to the code.
 
 Review the following code diff in the file "${
